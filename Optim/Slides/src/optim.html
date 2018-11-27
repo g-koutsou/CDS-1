@@ -62,8 +62,6 @@
       li {
           margin: 6pt 0;
       }
-
-
       
       .red {
 	  color: #9A1E02;
@@ -1501,6 +1499,81 @@ The resulting plot should look like:
 For which value of `VL` do we achieve best performance? Why?
 
 ---
+
+# AoS to SoA
+
+.left-column[ In Task D you need to modify `space-time-soa-v.c`. First transfer your modifications from `space-time-aos.c`, tagged with `_TODO_A_`.
+
+`space-time-soa-v.c` implements the same structure of arrays as in `space-time-soa.c`
+
+For the pieces tagged with `_TODO_D_` you need to implement `comp_s()`
+in intrinsics. Once done, as in the previous tasks, make and submit:
+
+`make D`<br/>
+`sbatch sub-D.job`
+
+and plot: `python3 plot-D.py`.
+]
+
+.right-column[
+.smallerer[
+```C
+void
+comp_s(st_coords *arr, int L)
+{
+#pragma omp parallel for
+  for(int i=0; i<L/VL; i++) {
+    register __m512 x = _mm512_load_ps(&arr[i].x[0]);
+    register __m512 y = _mm512_load_ps(&arr[i].y[0]);
+    register __m512 z = _mm512_load_ps(&arr[i].z[0]);
+    register __m512 t = _mm512_load_ps(&arr[i].t[0]);
+    register __m512 s0;
+    /* 
+       _TODO_D_ 
+
+       Complete this function using intrinsics so that it computes: 
+
+       arr[i].s[:] = arr[i].t[:]**2 - (
+                        arr[i].x[:]**2 +
+                        arr[i].y[:]**2 +
+                        arr[i].z[:]**2
+				       )
+
+       You will use:
+       
+       _mm512_mul_ps();
+       _mm512_fmadd_ps();
+       _mm512_fmsub_ps();
+
+       and the temporary variable s0.
+    */
+    s0 = _mm512_mul_ps(x, x);
+    s0 = _mm512_fmadd_ps(y, y, s0);
+    s0 = _mm512_fmadd_ps(z, z, s0);
+    s0 = _mm512_fmsub_ps(t, t, s0);
+
+    /*
+      Store s0 to arr[i].s[:]
+     */
+    _mm512_stream_ps(&arr[i].s[0], s0);
+  }
+    
+  return;
+}
+```
+]
+]
+
+---
+# AoS to SoA
+
+### Task D
+
+The resulting plot should look like:
+![soa](./1-D.png)
+
+---
+
 # MatMul
 
 ### This exercise deals with a matrix-matrix multiplication
