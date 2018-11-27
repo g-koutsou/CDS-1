@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH -J mm-orig
+#SBATCH -N 1
+#SBATCH -o orig-%j.out
+#SBATCH -e orig-%j.err
+export OMP_NUM_THREADS=128
+module load openmpi
+L=(128 256 512 1024 2048 4096 8192)
+
+for ((i=0; i<${#L[*]}; i++)) ; do
+	M=${L[$i]}
+	srun numactl --membind 1 ./mm-orig $M $M
+done | tee orig.txt
+
+cat orig.txt | awk '{print $4*$7, $0}' | sort -n > orig-sorted.txt
