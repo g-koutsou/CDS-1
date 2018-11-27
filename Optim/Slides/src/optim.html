@@ -31,9 +31,24 @@
       img[alt=lapl-blck] { width: 60%; margin-left: 20%; margin-right: 20%;}
       img[alt=lapl-vect] { width: 60%; margin-left: 20%; margin-right: 20%;}
 
+      @page {
+	  size: 908px 681px;
+	  margin: 0;
+      }
+
+      @media print {
+	  .remark-slide-scaler {
+	      width: 100% !important;
+	      height: 100% !important;
+	      transform: scale(1) !important;
+	      top: 0 !important;
+	      left: 0 !important;
+	  }
+      }
+
       .remark-slide-content {
-      background: #f8f8f8;
-      font-size: 15pt;
+	  background: #f8f8f8;
+	  font-size: 15pt;
       }
       
       body {
@@ -1883,7 +1898,7 @@ Vector-friendly version compared to original and blocked versions
 </textarea>
 </body>
 
-<script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">
+<script src="./remark-latest.min.js" type="text/javascript">
 </script>
 <script type="text/javascript">
 var slideshow = remark.create({slideNumberFormat: '%current%'})
