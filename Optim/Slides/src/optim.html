@@ -341,7 +341,7 @@ template: normal
 1. 3D laplacian-stencil code
     - Multi-threading (`OpenMP`)
     - Data layout transformations
-    - Blocking
+    - Blocking (or tiling)
 
 ---
 
@@ -1803,7 +1803,7 @@ random $b$ and gauge $u$
 - This includes the bulk of the Laplacian operation in function `lapl()` at [`lapl.c:145`](https://github.com/g-koutsou/CDS-1/blob/master/Optim/Ex/Lapl-3D/lapl.c#L145)
 
 - After you're done compile with `make A` and submit the job
-  `sub-A.job`. You can then plot with `python plot-A.py`
+  `sbatch sub-A.job`. You can then plot with `python3 plot-A.py`
 
 ---
 # 3D Laplacian
