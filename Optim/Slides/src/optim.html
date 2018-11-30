@@ -641,11 +641,12 @@ template: opt
 
 #### Vectorization
 - We will see how to use *vector intrinsic functions* which compile
-  to SIMD instructions
+  to Single Instruction Mutliple Data (SIMD) instructions
 - At first sight, this optimization seems to target compute bound kernels
 - However the data transformations required to efficiently vectorize
   a compute kernel also prove beneficial for the I/O efficiency
 
+<!--		     
 .left-column-55[
 ```C
   float ar = creal(a);
@@ -671,7 +672,7 @@ template: opt
   }
 ```
 ]
-
+-->
 ---
 template: opt
 
