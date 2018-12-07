@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH -J lapl-A
+#SBATCH -N 1
+#SBATCH -o A-%j.out
+#SBATCH -e A-%j.err
+module load openmpi
+L=128
+omps=(4 8 16 32 64 128)
+
+for omp in ${omps[*]}; do
+    export OMP_NUM_THREADS=$omp
+    srun numactl --membind 1 ./lapl $L > orig-nomp${omp}.txt
+done 
+
+for omp in ${omps[*]}; do
+    echo $omp $(grep 'lapl()' orig-nomp${omp}.txt)
+done > orig.txt
+
+

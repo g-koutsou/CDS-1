@@ -1,0 +1,7 @@
+ FLAT: M = 128, N = 128, took: 8.61e-05 sec, P = 4.87e+04 Mflop/s
+ FLAT: M = 256, N = 256, took: 3.80e-04 sec, P = 8.83e+04 Mflop/s
+ FLAT: M = 512, N = 512, took: 3.00e-03 sec, P = 8.94e+04 Mflop/s
+ FLAT: M = 1024, N = 1024, took: 2.13e-02 sec, P = 1.01e+05 Mflop/s
+ FLAT: M = 2048, N = 2048, took: 1.86e-01 sec, P = 9.25e+04 Mflop/s
+ FLAT: M = 4096, N = 4096, took: 1.46e+00 sec, P = 9.40e+04 Mflop/s
+ FLAT: M = 8192, N = 8192, took: 1.60e+01 sec, P = 6.87e+04 Mflop/s

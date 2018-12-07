@@ -1,0 +1,7 @@
+16384  BLCK: M = 128, N = 128, took: 2.10e-04 sec, P = 2.00e+04 Mflop/s, BM = 64, BN = 64
+65536  BLCK: M = 256, N = 256, took: 4.93e-04 sec, P = 6.81e+04 Mflop/s, BM = 64, BN = 64
+262144  BLCK: M = 512, N = 512, took: 1.06e-03 sec, P = 2.53e+05 Mflop/s, BM = 64, BN = 64
+1048576  BLCK: M = 1024, N = 1024, took: 4.69e-03 sec, P = 4.58e+05 Mflop/s, BM = 64, BN = 64
+4194304  BLCK: M = 2048, N = 2048, took: 4.10e-02 sec, P = 4.19e+05 Mflop/s, BM = 64, BN = 64
+16777216  BLCK: M = 4096, N = 4096, took: 3.32e-01 sec, P = 4.14e+05 Mflop/s, BM = 64, BN = 64
+67108864  BLCK: M = 8192, N = 8192, took: 3.40e+00 sec, P = 3.24e+05 Mflop/s, BM = 64, BN = 64

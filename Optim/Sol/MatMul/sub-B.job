@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH -J mm-blck
+#SBATCH -N 1
+#SBATCH -o blck-%j.out
+#SBATCH -e blck-%j.err
+export OMP_NUM_THREADS=128
+module load openmpi
+L=(128 256 512 1024 2048 4096 8192)
+
+for ((i=0; i<${#L[*]}; i++)) ; do
+	M=${L[$i]}
+	srun numactl --membind 1 ./mm-blck $M $M
+done | tee blck.txt
+
+cat blck.txt | grep BLCK | awk '{print $4*$7, $0}' | sort -n > blck-sorted.txt

@@ -1,0 +1,17 @@
+ VL = 16 Nthr = 128 L = 1024 in 9.6e-06 +/- 9.5e-07 secs, 0.749132 Gflop/s, 2.14038 Gbytes/s
+ VL = 16 Nthr = 128 L = 2048 in 8.4e-06 +/- 3.1e-07 secs, 1.70018 Gflop/s, 4.85764 Gbytes/s
+ VL = 16 Nthr = 128 L = 4096 in 9.9e-06 +/- 9.7e-07 secs, 2.90545 Gflop/s, 8.30128 Gbytes/s
+ VL = 16 Nthr = 128 L = 8192 in 8.3e-06 +/- 2.7e-07 secs, 6.88178 Gflop/s, 19.6622 Gbytes/s
+ VL = 16 Nthr = 128 L = 16384 in 8.9e-06 +/- 2.7e-07 secs, 12.908 Gflop/s, 36.8799 Gbytes/s
+ VL = 16 Nthr = 128 L = 32768 in 8.7e-06 +/- 2.9e-07 secs, 26.4064 Gflop/s, 75.4468 Gbytes/s
+ VL = 16 Nthr = 128 L = 65536 in 9.8e-06 +/- 8.9e-07 secs, 46.8376 Gflop/s, 133.822 Gbytes/s
+ VL = 16 Nthr = 128 L = 131072 in 1.0e-05 +/- 3.9e-07 secs, 88.0952 Gflop/s, 251.7 Gbytes/s
+ VL = 16 Nthr = 128 L = 262144 in 1.4e-05 +/- 1.4e-06 secs, 131.175 Gflop/s, 374.787 Gbytes/s
+ VL = 16 Nthr = 128 L = 524288 in 1.7e-05 +/- 1.0e-06 secs, 215.038 Gflop/s, 614.395 Gbytes/s
+ VL = 16 Nthr = 128 L = 1048576 in 2.7e-05 +/- 2.4e-06 secs, 269.504 Gflop/s, 770.011 Gbytes/s
+ VL = 16 Nthr = 128 L = 2097152 in 9.6e-05 +/- 6.6e-07 secs, 153.388 Gflop/s, 438.253 Gbytes/s
+ VL = 16 Nthr = 128 L = 4194304 in 2.6e-04 +/- 1.8e-06 secs, 114.914 Gflop/s, 328.325 Gbytes/s
+ VL = 16 Nthr = 128 L = 8388608 in 5.1e-04 +/- 1.1e-05 secs, 115.337 Gflop/s, 329.534 Gbytes/s
+ VL = 16 Nthr = 128 L = 16777216 in 9.5e-04 +/- 3.2e-06 secs, 123.101 Gflop/s, 351.716 Gbytes/s
+ VL = 16 Nthr = 128 L = 33554432 in 1.9e-03 +/- 1.9e-06 secs, 125.767 Gflop/s, 359.335 Gbytes/s
+ VL = 16 Nthr = 128 L = 67108864 in 3.7e-03 +/- 2.4e-06 secs, 126.947 Gflop/s, 362.705 Gbytes/s
