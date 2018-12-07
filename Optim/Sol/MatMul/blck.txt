@@ -1,0 +1,14 @@
+ FLAT: M = 128, N = 128, took: 8.70e-05 sec, P = 4.82e+04 Mflop/s
+ BLCK: M = 128, N = 128, took: 2.10e-04 sec, P = 2.00e+04 Mflop/s, BM = 64, BN = 64
+ FLAT: M = 256, N = 256, took: 3.44e-04 sec, P = 9.75e+04 Mflop/s
+ BLCK: M = 256, N = 256, took: 4.93e-04 sec, P = 6.81e+04 Mflop/s, BM = 64, BN = 64
+ FLAT: M = 512, N = 512, took: 2.99e-03 sec, P = 8.97e+04 Mflop/s
+ BLCK: M = 512, N = 512, took: 1.06e-03 sec, P = 2.53e+05 Mflop/s, BM = 64, BN = 64
+ FLAT: M = 1024, N = 1024, took: 2.18e-02 sec, P = 9.86e+04 Mflop/s
+ BLCK: M = 1024, N = 1024, took: 4.69e-03 sec, P = 4.58e+05 Mflop/s, BM = 64, BN = 64
+ FLAT: M = 2048, N = 2048, took: 1.89e-01 sec, P = 9.10e+04 Mflop/s
+ BLCK: M = 2048, N = 2048, took: 4.10e-02 sec, P = 4.19e+05 Mflop/s, BM = 64, BN = 64
+ FLAT: M = 4096, N = 4096, took: 1.68e+00 sec, P = 8.16e+04 Mflop/s
+ BLCK: M = 4096, N = 4096, took: 3.32e-01 sec, P = 4.14e+05 Mflop/s, BM = 64, BN = 64
+ FLAT: M = 8192, N = 8192, took: 1.52e+01 sec, P = 7.22e+04 Mflop/s
+ BLCK: M = 8192, N = 8192, took: 3.40e+00 sec, P = 3.24e+05 Mflop/s, BM = 64, BN = 64
